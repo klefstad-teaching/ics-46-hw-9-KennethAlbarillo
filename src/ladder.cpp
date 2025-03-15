@@ -5,8 +5,8 @@ cerr << msg << " | " << word1 << " -> " << word2;
 }
 
 bool edit_distance_within(const std::string& str1, const std::string& str2, int d){
-    if (str1 == str2) return 1;
     int this_size = str1.size(), other_size = str2.size();
+    if (str1 == str2) return 1;
     if (abs(this_size - other_size) > 1) return 0;
     int this_index = 0, other_index = 0, difference = 0;
     for (; this_index < this_size && other_index < other_size;){
